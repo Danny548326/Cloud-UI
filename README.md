@@ -1,6 +1,4 @@
-# dumi-test
-
-A static site base on [dumi](https://d.umijs.org).
+# Cloud-UI
 
 ## Development
 

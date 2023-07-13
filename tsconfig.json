@@ -3,10 +3,7 @@
     "strict": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "baseUrl": "./",
-    "paths": {
-      "@@/*": [".dumi/tmp/*"]
-    }
+    "baseUrl": "./"
   },
-  "include": [".dumi/**/*", ".dumirc.ts"]
+  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
 }
