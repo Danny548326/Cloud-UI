@@ -10,10 +10,10 @@ class Alert extends HTMLElement implements CustomElements {
     const div = document.createElement('div');
     const type = this.getAttribute('type');
 
-    if (type === 'success') div.setAttribute('class', 'alert success')
-    if (type === 'error') div.setAttribute('class', 'alert error')
-    if (type === 'info') div.setAttribute('class', 'alert info')
-    if (type === 'warning') div.setAttribute('class', 'alert warning')
+    if (type === 'success') div.setAttribute('class', 'success')
+    if (type === 'error') div.setAttribute('class', 'error')
+    if (type === 'info') div.setAttribute('class', 'info')
+    if (type === 'warning') div.setAttribute('class', 'warning')
     const styleElement = document.createElement('style');
     // const linkElem = document.createElement('link');
     const title = this.getAttribute('title');
