@@ -1,3 +1,4 @@
+import './index.less';
 import Alert from './components/Alert'
 
 export { Alert };

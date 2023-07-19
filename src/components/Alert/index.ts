@@ -1,6 +1,5 @@
 import AlertType from './interface';
-
-
+import style from './index.less';
 class Alert extends HTMLElement implements CustomElements {
   
   constructor( ) { 
@@ -9,22 +8,29 @@ class Alert extends HTMLElement implements CustomElements {
     const shadow = this.attachShadow({ mode: 'open' });
     
     const div = document.createElement('div');
-    const style = document.createElement('style');
+    const type = this.getAttribute('type');
+
+    if (type === 'success') div.setAttribute('class', 'alert success')
+    if (type === 'error') div.setAttribute('class', 'alert error')
+    if (type === 'info') div.setAttribute('class', 'alert info')
+    if (type === 'warning') div.setAttribute('class', 'alert warning')
+    const styleElement = document.createElement('style');
+    // const linkElem = document.createElement('link');
     const title = this.getAttribute('title');
     const text = this.getAttribute('text');
     
-
     const titleWrapper = document.createElement('div');
+    titleWrapper.setAttribute('class', 'title')
     titleWrapper.innerText = title || ''
-    titleWrapper.setAttribute('class', 'text-3xl font-bold underline')
+
     const textWrapper = document.createElement('div');
     textWrapper.innerText = text || ''
   
 
     div.appendChild(titleWrapper);
     div.appendChild(textWrapper);
-
-    shadow.appendChild(style);
+    styleElement.textContent = `${style}`;
+    shadow.appendChild(styleElement);
     shadow.appendChild(div);
   }
 
